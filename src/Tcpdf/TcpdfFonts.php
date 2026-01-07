@@ -12,9 +12,9 @@ final class TcpdfFonts
 
     public static function register(TCPDF $pdf): void
     {
-        $fontPath = dirname(__DIR__, 2).'/resources/dist/fonts/tcpdf';
+        $fontDirectory = dirname(__DIR__, 2).'/resources/dist/fonts/tcpdf/';
 
-        $pdf->AddFont(self::DEFAULT_FONT, '', 'notosansarabic.php', $fontPath);
-        $pdf->AddFont(self::DEFAULT_FONT, 'B', 'notosansarabicb.php', $fontPath);
+        $pdf->AddFont(self::DEFAULT_FONT, '', $fontDirectory.'notosansarabic.php');
+        $pdf->AddFont(self::DEFAULT_FONT, 'B', $fontDirectory.'notosansarabicb.php');
     }
 }
